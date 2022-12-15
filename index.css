@@ -1,26 +1,40 @@
+body{
+  background-color: #FAFAFA;
+}
+
 #navb{
     display: flex;
     border: 3px solid black;
     width: 95%;
     margin: auto;
-    text-align: center;
+    justify-content: space-between;
    
     
 }
 
 #box1{
-    border: 3px solid red;
-    width: 10%;
-    padding-top: -100px;
-    margin-top: 0px;
-    padding-bottom: -10%;
+    width: 8%;
+    align-items: flex-start;
+    border: 2px solid yellow;
+    padding-top: 0;
+    height: 40px;
 }
+#box1 img{
+  width: 100%; /* or any custom size */
+    height: 50%; 
+    object-fit: contain;
+    border: 4px solid green;
+}
+  
+
+
 #box2{
-    border: 3px solid grey;
+    /* border: 3px solid grey; */
     width: 60%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: -150px;
     
     
 }
@@ -42,18 +56,18 @@
 
 }
 #box3{
-    border: 3px solid blue;
-    width: 30%;
+    /* border: 3px solid blue; */
+    width: 20%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #navb2{
     display: flex;
-    border: 3px solid black;
     width: 95%;
     margin: auto;
+    justify-content: space-between;
 }
 #box4{
     /* border:  3px solid red; */
@@ -65,24 +79,204 @@
     
 }
 #box5{
-    border: 3px solid grey;
     width: 48%;
     margin-left: 4px;
 }
-
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-  }
-  form.example button:hover {
-    background: #0b7dda;
-  }
+#box6{
+  display: flex;
+  margin-left: -30px;
   
-  form.example::after {
-    content: "";
-    clear: both;
-  }
+}
+#box6 button{
+  background-color: #ff6f61;
+  color: aliceblue;
+  border: 0px;
+  border-radius: 5px;
+}
+
+#nav3{
+  /* border: 3px solid green; */
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.dropbtn {
+  /* padding: 16px;
+  font-size: 16px; */
+  border: none;
+  background-color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: white;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color: #ff6f61;}
+
+/* after nav part */
+.mySlides {display:none;}
+
+
+.d1{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-left: 50PX;
+  padding-right: 50PX;
+}
+.d1 div{
+  margin-top: 10px;
+  width: 11%;
+}
+.d1 img{
+  width: 100%;
+}
+.d1 p{
+  text-align: center;
+}
+.d1>div:hover {
+  cursor: pointer;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+#ws{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-left: 50PX;
+  padding-right: 50PX;
+}
+
+#ws div{
+  margin-top: 10px;
+  width: 15%;
+  padding-left: 10px;
+}
+#ws img{
+  width: 100%;
+}
+#ws>div:hover{
+  cursor: pointer;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+#ayu{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-left: 50PX;
+  padding-right: 50PX;
+}
+#ayu div{
+  margin-top: 10px;
+  width: 22%;
+  padding-left: 10px;
+}
+#ayu img{
+  width: 100%;
+}
+#ayu>div:hover{
+  cursor: pointer;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+#ldiv{
+  /* border: 3px solid red ;  */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#ldiv div{
+  align-items: center;
+  text-align: center;
+  width: 32%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#ldiv h3{
+  font-weight: bold;
+}
+#ldiv p{
+  font-family: serif;
+}
+#ddiv{
+  margin: auto;
+  display: flex;
+  width: 76%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+#lpage{
+  display: flex;
+  padding-top: 20px;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+  background-color: #FFFDE7;
+}
+#lpage div{
+  padding-left: 10px;
+  width: 30%;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
+  margin-left: 10px;
+}
+#imgdiv{
+  display: flex;
+  justify-content: space-between;
+}
+#imgdiv img{
+  width: 30%;
+  padding-right: 10px;
+}
+
+#mainlpage{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-color: #FFFDE7;
+  margin-top: 30px;
+}
+
+#lpage2{
+  display: flex;
+  /* border: 3px solid red; */
+  width: 80;
+  margin: auto;
+  justify-content: space-between;
+}
+.cdiv{
+  display: flex;
+  width: 30%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.cdiv div{
+  /* border: 3px solid green; */
+}
