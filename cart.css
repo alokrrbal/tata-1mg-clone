@@ -1,0 +1,148 @@
+#cartCont{
+    width: 77%;
+    /* border: 3px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+#proCont{
+    border: 3px solid blue;
+    width: 55%;
+}
+#payCont{
+    /* border: 3px solid black; */
+    width: 42%;
+}
+#offer{
+    display: flex;
+    width: 480px;
+    margin-left: 1%;
+    justify-content: space-around;
+    align-items: center;
+    align-items: top;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 20px;
+}
+#offer h3{
+    margin-left: -45%;
+    font-family: sans-serif;
+    font-weight: 550;
+    
+}
+
+#tick{
+    /* border: 3px solid yellowgreen; */
+    padding-left: 30px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px
+     0px 0px 1px;
+     margin-left: 1%;
+     margin-right: 1%;
+     padding-bottom: 1px;
+     padding-top: 1px;
+     margin-bottom: 20px;
+     justify-content: space-around;
+    
+}
+
+#pchcek{
+    
+    display: flex;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px
+     0px 0px 1px;
+     padding-bottom: 1px;
+     padding-top: 1px;
+     margin-left: 1%;
+     margin-right: 1%;
+     margin-left: 1%;
+     margin-right: 1%;
+     padding-left: 1%;
+     padding-right: 1%;
+     margin-bottom: 20px;
+}
+#pcheck2{
+    
+    text-align: end;
+    margin-left: 45%;
+}
+#check{
+    /* border: 2px solid green; */
+    align-items: center;
+    padding-left: 30px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px
+     0px 0px 1px;
+}
+#ck{
+    background-color: #ff6f61;
+    width: 95%;
+    height: 40px;
+    font-size: larger;
+    font-family: sans-serif;
+    color: white; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 1%;
+     margin-right: 1%;
+}
+#ck:hover{
+    cursor: pointer;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  #cb:hover{
+    cursor: pointer;
+  }
+  #proCont{
+    display: grid;
+  grid-template-columns: repeat(2,1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  .card{
+    /* border: 3px solid blueviolet; */
+    padding-left: 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+  }
+  .card h3{
+    font-family: sans-serif;
+  }
+   
+  .off{
+    color: green;
+    margin-left:10px;
+  }
+  
+  .price{
+    text-decoration: line-through;
+    margin-left:5px;
+  }
+  
+  .card:hover {
+    /* cursor: pointer; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+
+  .remove{
+    background-color: #ff6f61;
+    border: 0px;
+    border-radius: 4px;
+    color: white;
+  }
+  .remove:hover{
+    cursor: pointer;
+  }
+
+  #ts{
+    color: rgb(8, 222, 8);
+    font-family: sans-serif;
+  }
