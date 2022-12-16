@@ -7,7 +7,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹1164",
         off:"53% OFF",
-        cutofprice:"₹548"
+        cutofprice:548
     },
     {
         id:2,
@@ -16,7 +16,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹88",
         off:"5% OFF",
-        cutofprice:"₹83"
+        cutofprice:83
     },
     {
         id:3,
@@ -25,7 +25,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹665",
         off:"65% OFF",
-        cutofprice:"₹233"
+        cutofprice:233
     },
     {
         id:4,
@@ -34,7 +34,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹2640",
         off:"20% OFF",
-        cutofprice:"₹2109"
+        cutofprice:2109
     },
     {
         id:5,
@@ -43,7 +43,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹1195",
         off:"5% OFF",
-        cutofprice:"₹1135"
+        cutofprice:1135
     },
     {
         id:6,
@@ -52,7 +52,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹1199",
         off:"7% OFF",
-        cutofprice:"₹1110"
+        cutofprice:1110
     },
     {
         id:7,
@@ -61,7 +61,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹1147",
         off:"24% OFF",
-        cutofprice:"₹874"
+        cutofprice:874
     },
     {
         id:8,
@@ -70,7 +70,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹60",
         off:"25% OFF",
-        cutofprice:"₹45"
+        cutofprice:45
     },
     {
         id:9,
@@ -79,7 +79,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹2269",
         off:"6% OFF",
-        cutofprice:"₹980"
+        cutofprice:980
     },
     {
         id:10,
@@ -88,7 +88,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹1550",
         off:"16% OFF",
-        cutofprice:"₹1299"
+        cutofprice:1299
     },
     {
         id:11,
@@ -97,7 +97,7 @@ let proArr=[
         mrp:"MRP",
         price:"₹1164",
         off:"53% OFF",
-        cutofprice:"₹548"
+        cutofprice:548
     },
     {
         id:12,
@@ -106,32 +106,80 @@ let proArr=[
         mrp:"MRP",
         price:"₹1195",
         off:"5% OFF",
-        cutofprice:"₹1135"
+        cutofprice:1135
     },
 ]
 
 function appendData(data){
-    // document.getElementById("cont").innerHTML=null;
+    document.getElementById("cont").innerHTML=null;
     data.forEach((el,index)=>{
         let box =document.createElement("div");
         box.setAttribute("class","child");
-        let imgbox=document.createElement("div");
+        // let imgbox=document.createElement("div");
         let img = document.createElement("img");
         img.setAttribute("src",el.img);
-        imgbox.append(img)
+        // imgbox.setAttribute("class","pimg")
+        // imgbox.append(img)
         let brand = document.createElement("h3");
         brand.innerText=el.brand;
         let mrp =document.createElement("span");
         mrp.innerText=el.mrp;
         let price=document.createElement("span");
+        price.setAttribute("class","price")
         price.innerText=el.price;
         let off =document.createElement("span");
+        off.setAttribute("class","off")
         off.innerText=el.off;
-        let cutofprice =document.createElement("p");
-        cutofprice.innerText=el.cutofprice;
-        box.append(imgbox,brand,mrp,price,off,cutofprice);
+        let cutofprice =document.createElement("h3");
+        let addToCart=document.createElement("button");
+        addToCart.setAttribute('class',"addToCart");
+        addToCart.innerText="Add"
+
+        // adding to the cartpage 
+        addToCart.addEventListener("click",()=>{
+            let cartData= JSON.parse(localStorage.getItem("cart"));
+
+            if(cartData==null) cartData = [];
+
+            // herer we doing that when we add product to the cart it showing an alert and if its allready in the cart its showing another alert
+            let isAlreadyInCart=false;
+            for(let i=0;i<cartData.length;i++){
+                if(cartData[i].id === el.id){
+                    isAlreadyInCart = true;
+                    break;
+                };
+            }
+            if(isAlreadyInCart ==  true){
+                alert("Product Allready in Cart")
+            }else{
+                cartData.push({...el,quantity:1});
+            localStorage.setItem("cart",JSON.stringify(cartData))
+            alert("Product Added To Cart")
+
+            }
+
+        })
+        // let ddiv=document.createElement("div")
+        // ddiv.setAttribute("class","ddiv");
+        // ddiv.append(brand,mrp,price,off,cutofprice)
+        cutofprice.innerText= "₹" +el.cutofprice;
+        box.append(img,brand,mrp,price,off,cutofprice,addToCart);
         document.getElementById("cont").append(box);
     });
 
 }
 appendData(proArr);
+
+
+// this is sorting part
+
+document.getElementById("pricesort").addEventListener("change",(e)=>{
+    let sortby = e.target.value;
+    if(sortby ==="h2l"){
+        let newData = proArr.sort((a,b) => +b.cutofprice - +a.cutofprice);
+        appendData(newData);
+    }else if(sortby === "l2h"){
+        let newData = proArr.sort((a,b)=>(+a.cutofprice - b.cutofprice));
+        appendData(newData);
+    }
+})
