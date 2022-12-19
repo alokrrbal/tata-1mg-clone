@@ -108,6 +108,24 @@ let proArr=[
         off:"5% OFF",
         cutofprice:1135
     },
+    {
+        id:12,
+        brand:"Philips HP8100/60 Hair Dryer Blue",
+        img:"https://onemg.gumlet.io/images/f_auto,c_fit,q_auto,w_150,h_150/zdovqxonzzgqq1pkp72r/philips-hp8100-60-hair-dryer-blue.jpg",
+        mrp:"MRP",
+        price:"₹1195",
+        off:"5% OFF",
+        cutofprice:1135
+    },
+    {
+        id:12,
+        brand:"GOQii Smart Vital Plus with 3 Months Health & Personal Coachin",
+        img:"https://onemg.gumlet.io/images/f_auto,c_fit,q_auto,w_150,h_150/go85btsyqd6v7yniwm3c/goqii-smart-vital-plus-with-3-months-health-personal-coaching-smart-watch.jpg",
+        mrp:"MRP",
+        price:"₹6499",
+        off:"46% OFF",
+        cutofprice:3499
+    },
 ]
 
 function appendData(data){

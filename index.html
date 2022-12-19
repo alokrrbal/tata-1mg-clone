@@ -22,7 +22,7 @@
       <div id="box2">
         <div style="color: #ff6f61">Medicines</div>
         <div>Lab Tests</div>
-        <div style="margin-left: -20px">
+        <div style="margin-left: -10px">
           <button
             style="
               background-color: #ff6f61;
@@ -39,7 +39,7 @@
         <div>COVID-19</div>
         <div>Ayurveda</div>
         <div>Care Plan</div>
-        <div style="margin-left: -20px">
+        <div style="margin-left: -10px">
           <button
             style="
               background-color: #ff6f61;
@@ -54,8 +54,8 @@
         </div>
       </div>
       <div id="box3">
-        <div><a style="text-decoration: none" href="">Login</a></div>
-        <div><a style="text-decoration: none" href="">Sign Up</a></div>
+        <div><button id="myBtn">Sign Up</button></div>
+        <div><button id="myBtn2">Login</button></div>
         <div><a style="text-decoration: none" href="">Offers</a></div>
         <div style="width: 10%">
           <a href="cart.html">
@@ -113,6 +113,7 @@
       <div class="dropdown" style=" width: 11%;">
         <button class="dropbtn">Vitamins & Nutrition</button>
         <div class="dropdown-content">
+          <a href="medicine.html">See All</a>
           <a href="#">Multivitamins</a>
           <a href="#">Vitamins A-Z</a>
           <a href="#">Fish Oil</a>
@@ -560,6 +561,60 @@ Corporate Governance
   </div>
   <h4 style="margin-top: 30px; text-align: center; padding-bottom: 30px ;">India's only LegitScript and ISO/ IEC 27001 certified online healthcare platform</h4>
 </div>
+
+
+<!-- this is signUp pop part -->
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Sign Up</h2>
+    </div>
+    <div class="modal-body">
+      <form>
+        <p>Name</p>
+        <input type="text" placeholder="Please Enter Your Name" class="inp" id="name">
+        <p>Email
+        </p>
+        <input type="email" placeholder="Please Enter Your Email" class="inp" id="email">
+        <p>Password</p>
+        <input type="password" placeholder="Please Enter Your Password" class="inp" id="pass">
+        <br>
+        <button id="btn">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- this is login pop part  -->
+
+<div id="myModal2" class="modal2">
+
+  <!-- Modal content -->
+  <div class="modal-content2">
+    <div class="modal-header2">
+      <span class="close2">&times;</span>
+      <h2>Login</h2>
+    </div>
+    <div class="modal-body2">
+      <form>
+        <p>Email
+        </p>
+        <input type="email" placeholder="Please Enter Your Email" class="inp2" id="eemail">
+        <p>Password</p>
+        <input type="password" placeholder="Please Enter Your Password" class="inp2" id="epass">
+        <br>
+        <button id="btn2">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
 
   </body>
   <script src="index.js"></script>
