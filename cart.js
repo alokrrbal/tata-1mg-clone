@@ -8,6 +8,7 @@ let it =document.getElementById("it");
 let tbp = document.getElementById("tbp");
 let ts = document.getElementById("ts");
 let pcount=document.getElementById("pcount")
+let ck = document.getElementById("ck");
 let tsp=0
 let tp=0
 let tprice=0
@@ -43,9 +44,8 @@ function displayProducts (data){
             localStorage.setItem("cart",JSON.stringify(data))
 
         })
-        card.append(image,brand,mrp,price,off,cutofprice,remove)
+        card.append(brand,mrp,price,off,cutofprice,remove)
         container.append(card)
-
     })
 }
 
@@ -55,3 +55,8 @@ ts.innerText="₹"+tsp
 
 it.innerText="₹"+tprice;
 tbp.innerText="₹"+tp;
+
+ck.addEventListener("click",()=>{
+    alert("Thank You So much for shoping")
+
+})
